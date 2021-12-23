@@ -1,0 +1,15 @@
+# Программа на первое задание
+
+from collections import deque
+
+mass_ = input("Введите массив: ")
+step = int(input("Введите шаг: "))
+
+n = deque(mass_)
+m = list(n[0])
+n.rotate(-(step-1))
+while n[0] != mass_[0]:
+    m.append(n[0])
+    n.rotate(-(step-1))
+
+print(m)
